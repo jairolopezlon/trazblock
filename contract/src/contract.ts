@@ -1,12 +1,27 @@
 import { NearBindgen, near, call, view } from 'near-sdk-js';
 
+interface Minter{
+  companyName:string,
+  address:string,
+  certificatesMinted:string[]
+}
+interface MinterMap {
+  [address:string]: Minter
+}
+
 @NearBindgen({})
-class HelloNear {
+class Trazblock {
   greeting: string = "Hello";
+  certificateMinters: {MinterMap} | {} = {} 
 
   @view({}) // This method is read-only and can be called for free
   get_greeting(): string {
     return this.greeting;
+  }
+
+  @view({})
+  get_certificateMinters(): MinterMap{
+    return this.certificateMinters;
   }
 
   @call({}) // This method changes the state, for which it cost gas

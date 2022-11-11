@@ -7,7 +7,8 @@ node_modules
 
 # build
 /out
-/dist
+frontend/dist
+frontend/.parcel-cache
 
 # keys
 /templates/react/neardev
@@ -17,6 +18,7 @@ node_modules
 
 # production
 /build
+contract/build
 
 # misc
 .DS_Store

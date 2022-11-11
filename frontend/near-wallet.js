@@ -48,6 +48,8 @@ export class Wallet {
       this.accountId = this.walletSelector.store.getState().accounts[0].accountId;
     }
 
+    console.log({ isSignedIn })
+
     return isSignedIn;
   }
 
@@ -70,6 +72,7 @@ export class Wallet {
     const { network } = this.walletSelector.options;
     const provider = new providers.JsonRpcProvider({ url: network.nodeUrl });
 
+    console.log(99999999999, contractId)
     let res = await provider.query({
       request_type: 'call_function',
       account_id: contractId,
