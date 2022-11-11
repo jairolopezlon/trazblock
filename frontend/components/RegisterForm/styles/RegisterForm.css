@@ -1,0 +1,83 @@
+.register-form-msg {
+    font-size: 1.75rem;
+    text-align: center;
+    max-width: 600px;
+}
+
+.register-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.type-user-options-container {
+    display: flex;
+    gap: 1rem;
+    /* align-items: center; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-option {
+    width: min(300px, 100%);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+    padding: 2rem;
+    border-radius: .5rem;
+    transition: translate .2s ease-in-out;
+    cursor: pointer;
+}
+
+.card-option:hover {
+    translate: 0 -4px;
+}
+
+.card-option .card-option__user-type-name {
+    color: var(--color-primary);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.user-selector {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-form-btn-back {
+    /* padding: 1rem; */
+    cursor: pointer;
+    color: var(--color-dark-disable);
+}
+
+.form-title {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+.form-container {
+    gap: 1rem;
+}
+
+.form-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: .5rem;
+}
+
+.register-view {
+    width: min(470px, 100%);
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
